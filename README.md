@@ -1,2 +1,3 @@
 # etcetars
-generates an svg pfp inspired by the etcetera logo based on username
+
+Generate an avatar in the style of the Etcetera logo from a string

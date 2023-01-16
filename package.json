@@ -1,0 +1,16 @@
+{
+	"name": "etcetars",
+	"version": "1.0.0",
+	"description": "Generate an avatar in the style of the Etcetera logo from a string",
+	"license": "GPL-3.0",
+	"module": "src/lib.js",
+	"exports": "./src/lib.js",
+	"esnext": "./src/lib.js",
+	"repository": "mollersuite/etcetars",
+	"bugs": "https://github.com/mollersuite/etcetars/issues",
+	"author": {
+		"name": "Etcetera",
+		"email": "npm@cetera.uk",
+		"url": "https://cetera.uk"
+	}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>etcetars demo</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+		<script defer type="module">
+			import generate from "./src/lib.js"
+			const input = document.querySelector("input")
+			const img = document.querySelector("img")
+			input.addEventListener("input", async () => {
+				img.src = "data:image/svg+xml;base64," + btoa(await generate(input.value))
+			})
+		</script>
+	</head>
+	<body>
+		<h1>etcetars: Etcetera Avatars</h1>
+		<p>
+			etcetars is a library for generating avatars in the style of the Etcetera logo from a
+			string. There are (I think?) 1,<wbr />253,<wbr />437,<wbr />565,<wbr />941,<wbr />484,<wbr />265,<wbr />163,<wbr />826,<wbr />019,<wbr />287,<wbr />109,<wbr />375
+			possible avatars.
+		</p>
+		<label>
+			<input type="text" value="etc" placeholder="Type a username here..."/>
+			<img />
+		</label>
+		<footer>
+			<p>
+				Free as in freedom. Licensed under the
+				<a rel="license" href="https://gnu.org/licenses/gpl">GPL version 3 (or later).</a>
+			</p>
+			<a rel="author" href="https://cetera.uk">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 173.8 275.72"
+					height="20"
+					fill="currentColor">
+					<circle cx="37.13" cy="26.43" r="21.6" />
+					<circle cx="34.62" cy="117.87" r="34.62" class="middle" />
+					<circle cx="119.78" cy="130.68" r="21.6" class="middle" />
+					<circle cx="127.16" cy="46.64" r="46.65" />
+					<circle cx="102.68" cy="219.58" r="56.14" class="bottom" />
+				</svg>
+				from Etcetera (obviously)
+			</a>
+		</footer>
+	</body>
+</html>
