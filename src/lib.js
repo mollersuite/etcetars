@@ -17,10 +17,6 @@ export default async function generate(username) {
 		[215.78, 281.72, 56.14],
 	].map(([x, y, radius], i) => {
 		const base = i * 4
-		console.log(bits[base + 1] % 360)
-		if (isNaN(bits[base + 1] % 360)) {
-			debugger
-		}
 		return {
 			type: bits[base] % 2,
 			rotation: Math.floor((bits[base + 1] / 255) * 360),
